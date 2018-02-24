@@ -19,6 +19,7 @@ def parse_args():
 
 def display_pose(intputpath, outputpath, imgname):
     img = Image.open(os.path.join(intputpath,imgname))
+    img = img.convert("RGB")
     width, height = img.size
     fig = plt.figure(figsize=(width/10,height/10),dpi=10)
     plt.imshow(img)
